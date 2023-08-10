@@ -1,10 +1,9 @@
+import pathlib
 import subprocess
 
-subprocess.run(["mkdir", "-v", "ostree"], check=True)
+pathlib.Path("ostree/tree").mkdir(parents=True,exist_ok=False)
 
 subprocess.run(["ostree", "--repo=ostree/repo", "init"], check=True)
-
-subprocess.run(["mkdir", "-pv", "ostree/tree"], check=True)
 
 with open("ostree/tree/hello.txt", 'w') as fo:
     fo.write("Hello, World!\n")

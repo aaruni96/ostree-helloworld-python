@@ -1,0 +1,15 @@
+# gitignore file
+
+# vscode stuff
+
+.vscode
+
+# python stuff
+
+.venv
+__pycache__
+
+# ostree stuff
+
+ostree
+
